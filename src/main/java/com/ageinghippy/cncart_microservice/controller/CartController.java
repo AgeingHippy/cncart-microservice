@@ -28,7 +28,7 @@ public class CartController {
 
         try {
             return ResponseEntity.ok(
-                    cartService.addCartItem(itemId, userId));
+                    cartService.addItem(itemId, userId));
         } catch (Exception e) {
             return ResponseEntity.status(500).body(e.getMessage());
         }
